@@ -3,7 +3,7 @@ var app = express();
 app.set('view engine', 'pug');
 app.set('views','./views');
 
-res.render('/auth/google', {
+app.get('/auth/google', function(req, res){
     res.render('main', {
 		login: req.query.login,
 		password: req.query.password
